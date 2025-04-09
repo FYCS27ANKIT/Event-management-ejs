@@ -1,0 +1,27 @@
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">All Events</h2>
+    <div class="row">
+        <% events.forEach(event => { %>
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-sm">
+                    <% if (event.image) { %>
+                        <img src="..<%= event.image %>" class="card-img-top" alt="Event Image">
+                    <% } else { %>
+                        <img src="../uploads/wp2349410.jpg" class="card-img-top" alt="Default Image">
+                    <% } %>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= event.title %></h5>
+                        <p class="card-text"><%= event.description %></p>
+                        <p class="text-muted"><%= new Date(event.date).toDateString() %></p>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<center class="mt-5">
+<% if (events.length === 0) { %>
+    <h3>No events available for the time.</h3>
+<% } %>
+</center>

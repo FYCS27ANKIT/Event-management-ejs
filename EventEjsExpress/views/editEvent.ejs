@@ -1,0 +1,33 @@
+<h2 class="mt-3 text-center">Edit Event</h2>
+<div class="card p-4 mt-5 w-25 shadow" style="position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%);">
+<form method="post" action="/editEvent/<%= event._id %>">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" id="title" name="title" class="form-control" value="<%= event.title %>" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea id="description" name="description" class="form-control" required><%= event.description %></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="date" class="form-label">Date:</label>
+        <input type="date" id="date" name="date" class="form-control" value="<%= event.date.toISOString().split('T')[0] %>" required>
+    </div>
+
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col">
+            <button
+            type="submit"
+            class="btn btn-primary w-100 mt-2"
+            >
+            Submit
+        </button>
+        </div>
+        <div class="col">
+            <a href="/dashboard" class="btn btn-primary w-100 mt-2">Cancel</a>
+        </div>
+    </div>
+</form>
+</div>

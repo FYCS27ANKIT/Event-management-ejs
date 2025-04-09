@@ -1,0 +1,52 @@
+<h3 class="text-center">Login form</h3>
+<div
+    class="container"
+>
+    <div class="card p-3 mt-5 w-25 shadow" style="position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%);">
+        <form method="post" action="/login">
+            <div class="mb-3">
+                <label for="" class="form-label">UserName</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Password</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id=""
+                    placeholder=""
+                />
+            </div>
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col">
+                    <button
+                    type="submit"
+                    class="btn btn-primary w-100 mt-2"
+                    >
+                    Submit
+                </button>
+                </div>
+                <div class="col">    
+                    <button
+                    type="reset"
+                    class="btn btn-primary w-100 mt-2"
+                    >
+                    Reset
+                </button>
+            </div>
+            </div>
+            
+        </form>
+        <center class="m-4">
+            <a href="/register">Don't have an account? Register</a>
+        </center>
+    </div>
+</div>
